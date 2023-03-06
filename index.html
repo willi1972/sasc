@@ -1,151 +1,310 @@
 ﻿<!DOCTYPE html>
 <html>
-<title>Saddleworth ASC</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="sasc.css">
+  <title>Saddleworth ASC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="sasc.css" />
 
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style>
-<body>
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      font-size: 16px;
+    }
+    .w3-half img {
+      margin-bottom: -6px;
+      margin-top: 16px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .w3-half img:hover {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="w3-container">
+        <img
+          src="images/Logo.jpg"
+          style="width: 100%"
+          onclick="onClick(this)"
+          alt="SASC Logo."
+        />
+      </div>
+      <div class="w3-bar-block">
+        <a
+          href="#"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-grayscale"
+          >Home</a
+        >
+        <a
+          href="#story"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Our Story</a
+        >
+        <a
+          href="#people"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Our People</a
+        >
+        <a
+          href="#join"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Join Us</a
+        >
+        <a
+          href="#where"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Find Us</a
+        >
+        <a
+          href="https://en-gb.facebook.com/Saddleworth-Swimming-Club-544340518939863/"
+          onclick="w3_close()"
+          target="_blank"
+          class="w3-button w3-hover-grayscale"
+          ><img
+            src="images/facebook.png"
+            align="left"
+            style="width: 10%"
+            alt="Facebook"
+          />
+          Find us on Facebook</a
+        >
+      </div>
+    </nav>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-      <img src="images/Logo.jpg" style="width:100%" onclick="onClick(this)" alt="SASC Logo.">
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-grayscale">Home</a> 
-    <a href="#story" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grayscale">Our Story</a> 
-      <a href="#people" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grayscale">Our People</a> 
-      <a href="#join" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grayscale">Join Us</a> 
-      <a href="#where" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grayscale">Find Us</a>
-      <a href="https://en-gb.facebook.com/Saddleworth-Swimming-Club-544340518939863/" onclick="w3_close()" target="_blank" class="w3-button w3-hover-grayscale"><img src="images/facebook.png" align="left" style="width:10%" alt="Facebook"> Find us on Facebook</a>
-  </div>
-</nav>
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="w3-button w3-black w3-margin-right"
+        onclick="w3_open()"
+        >☰</a
+      >
+      <span>Saddleworth A.S.C.</span>
+    </header>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Saddleworth A.S.C.</span>
-</header>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header -->
+      <div class="w3-container" style="margin-top: 80px" id="story">
+        <img
+          src="images/Pool.jpg"
+          style="width: 100%"
+          onclick="onClick(this)"
+          alt="Saddleworth Pool"
+        />
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="story">
-     <img src="images/Pool.jpg" style="width:100%" onclick="onClick(this)" alt="Saddleworth Pool">
-
-      <!-- Photo grid (modal) -->
-      <div class="w3-row-padding" align="center">
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding" align="center">
           <div class="w3-third">
-              <img src="images/swimnw.png" style="width:100%" align="bottom" onclick="onClick(this)" alt="Swim Northwest">
+            <img
+              src="images/swimnw.png"
+              style="width: 100%"
+              align="bottom"
+              onclick="onClick(this)"
+              alt="Swim Northwest"
+            />
           </div>
           <div class="w3-third">
-              <img src="images/swimeng.jpg" style="width:100%" align="bottom" onclick="onClick(this)" alt="Swim England">
+            <img
+              src="images/swimeng.jpg"
+              style="width: 100%"
+              align="bottom"
+              onclick="onClick(this)"
+              alt="Swim England"
+            />
           </div>
           <div class="w3-third">
-              <img src="images/swimmark.jpg" style="width:100%" align="bottom" onclick="onClick(this)" alt="Swim Mark">
+            <img
+              src="images/swimmark.jpg"
+              style="width: 100%"
+              align="bottom"
+              onclick="onClick(this)"
+              alt="Swim Mark"
+            />
           </div>
+        </div>
 
-       </div>
-
-      <!-- Modal for full size images on click-->
-      <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-          <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-              <img id="img01" class="w3-image">
-              <p id="caption"></p>
+        <!-- Modal for full size images on click-->
+        <div
+          id="modal01"
+          class="w3-modal w3-black"
+          style="padding-top: 0"
+          onclick="this.style.display='none'"
+        >
+          <span class="w3-button w3-black w3-xxlarge w3-display-topright"
+            >×</span
+          >
+          <div
+            class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+          >
+            <img id="img01" class="w3-image" />
+            <p id="caption"></p>
           </div>
+        </div>
+
+        <h1 class="w3-xxxlarge w3-text-black"><b>Our Story.</b></h1>
+        <hr style="width: 50px; border: 5px solid black" class="w3-round" />
+        <p>
+          Saddleworth Amateur Swimming Club (SASC) is based at Uppermill
+          Swimming Pool is at the heart of our community. The club was
+          established more than 30 years ago with the aim of developing local
+          swimmers, getting more swimmers in the water, building and engendering
+          a life-long love of the sport.
+        </p>
+        <p>
+          The club is part of the elite athlete pathway where talented swimmers
+          are identified and encouraged to develop their swimming as far as
+          possible including; regional, national & international competition
+          standards. Over the years we have had a number of Olympic and
+          Commonwealth games athletes as members of the club; Jess Lloyd, who
+          swam in the 2012 London Olympics and Ben Procter who swam in the 2012
+          London Paralympics being just two recent examples.
+        </p>
+        <p>
+          The club competes in local gala leagues and runs a number of internal
+          competitions. Additionally we encourage our members to take part in
+          open galas, triathlons & other swimming events.
+        </p>
+        <p>
+          The club was recently awarded the Swim21 national standard by Swim
+          Mark demonstrating our commitment to being an effective, ethical &
+          sustainable club.
+        </p>
       </div>
 
+      <!-- People -->
+      <div class="w3-container" id="people" style="margin-top: 75px">
+        <h1 class="w3-xxxlarge w3-text-black"><b>Our People.</b></h1>
+        <hr style="width: 50px; border: 5px solid black" class="w3-round" />
+        <p>The best team in the world.</p>
+        <p>
+          SASC is run by an able team of dedicated volunteers, whilst training
+          sessions are conducted by fully qualified professional coaches.
+        </p>
+      </div>
 
+      <!-- Join -->
+      <div class="w3-container" id="join" style="margin-top: 75px">
+        <h1 class="w3-xxxlarge w3-text-black"><b>Join Us.</b></h1>
+        <hr style="width: 50px; border: 5px solid black" class="w3-round" />
+        <p>Training sessions are on Monday & Wednesday evenings.</p>
+        <p>
+          We are currently accepting new swimmers from the age of 8 up to 16,
+          who can swim 25 metres in at least 3 strokes. If you child is a keen
+          swimmer, why not come down to a session and give us a try.
+        </p>
+        <p>
+          <b
+            >For more information and to arrange a trial email
+            sascadmin@gmail.com or contact 07766 258 020</b
+          >
+        </p>
+      </div>
 
-    <h1 class="w3-xxxlarge w3-text-black"><b>Our Story.</b></h1>
-    <hr style="width:50px;border:5px solid black" class="w3-round">
-      <p>
-        Saddleworth Amateur Swimming Club (SASC) is based at Uppermill Swimming Pool is at the heart of our community. The club was established more than 30 years ago with the aim of developing local swimmers, getting more swimmers in the water, building and engendering a life-long love of the sport.
-      </p>
-      <p>
-        The club is part of the elite athlete pathway where talented swimmers are identified and encouraged to develop their swimming as far as possible including; regional, national & international competition standards. Over the years we have had a number of Olympic and Commonwealth games athletes as members of the club; Jess Lloyd, who swam in the 2012 London Olympics and Ben Procter who swam in the 2012 London Paralympics being just two recent examples.
-      </p>
-      <p>The club competes in local gala leagues and runs a number of internal competitions. Additionally we encourage our members to take part in open galas, triathlons & other swimming events.</p>
-      <p>The club was recently awarded the Swim21 national standard by Swim Mark demonstrating our commitment to being an effective, ethical & sustainable club.</p>
- </div>
-  
-
-  <!-- People -->
-  <div class="w3-container" id="people" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Our People.</b></h1>
-    <hr style="width:50px;border:5px solid black" class="w3-round">
-      <p>The best team in the world.</p>
-      <p>SASC is run by an able team of dedicated volunteers, whilst training sessions are conducted by fully qualified professional coaches. 
-    </p>
-  </div>
-  
-  <!-- Join -->
-  <div class="w3-container" id="join" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Join Us.</b></h1>
-    <hr style="width:50px;border:5px solid black" class="w3-round">
-    <p>Training sessions are on Monday & Wednesday evenings.</p>
-    <p>We are currently accepting new swimmers from the age of 8 up to 16, who can swim 25 metres in at least 3 strokes. If you child is a keen swimmer, why not come down to a session and give us a try.</p>
-    <p><b>For more information and to arrange a trial email sascadmin@gmail.com or contact 07766 258 020</b></p>
-  </div>
-
-    <!-- Where -->
-  <div class="w3-container" id="where" style="margin-top:75px">
+      <!-- Where -->
+      <div class="w3-container" id="where" style="margin-top: 75px">
         <h1 class="w3-xxxlarge w3-text-black"><b>Where to find us.</b></h1>
-        <hr style="width:50px;border:5px solid black" class="w3-round">
-        <p>Saddleworth Leisure Centre, Station Rd, Uppermill, Oldham, OL3 6HQ</p>
-      <div class="w3-row-padding" align="center">
+        <hr style="width: 50px; border: 5px solid black" class="w3-round" />
+        <p>
+          Saddleworth Leisure Centre, Station Rd, Uppermill, Oldham, OL3 6HQ
+        </p>
+        <div class="w3-row-padding" align="center">
           <div class="w3-third">
-              <img src="images/map.png" style="width:100%" align="bottom" onclick="onClick(this)" alt="Map">
+            <img
+              src="images/map.png"
+              style="width: 100%"
+              align="bottom"
+              onclick="onClick(this)"
+              alt="Map"
+            />
           </div>
+        </div>
 
+        <p></p>
+        <p>
+          <b
+            >For more information and to arrange a trial email
+            sascadmin@gmail.com or contact 07766 258 020</b
+          >
+        </p>
       </div>
 
-       <p></p>
-        <p><b>For more information and to arrange a trial email sascadmin@gmail.com or contact 07766 258 020</b></p>
-  </div>
+      <!-- End page content -->
+    </div>
 
-<!-- End page content -->
-</div>
+    <!-- W3.CSS Container -->
+    <div
+      class="w3-light-grey w3-container w3-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="w3-right">
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-opacity"
+          >w3.css</a
+        >
+      </p>
+    </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-</script>
-
-</body>
-
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+  </body>
 </html>
