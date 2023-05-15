@@ -1,0 +1,338 @@
+﻿<html>
+  <title>Saddleworth ASC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="sasc.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap"
+    rel="stylesheet"
+
+  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Golos Text", sans-serif;
+    }
+    body {
+      font-size: 16px;
+    }
+    .w3-half img {
+      margin-bottom: -6px;
+      margin-top: 16px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .w3-half img:hover {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding"
+      style="z-index: 3; width: 300px; font-weight: 500"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="w3-container">
+        <img
+          src="images/Logo.jpg"
+          style="width: 100%; margin-bottom: 30px"
+          onclick="onClick(this)"
+          alt="SASC Logo."
+        />
+      </div>
+      <div class="w3-bar-block">
+        <a
+          href="index.html/#home"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-grayscale"
+          >Home</a
+        >
+        <a
+          href="#story"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Our Story</a
+        >
+        <a
+          href="#people"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Our People</a
+        >
+        <a
+          href="#galas"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-gray"
+          >Galas
+        </a>
+        <a
+          href="#join"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Join Us</a
+        >
+        <div class="w3-bar-item w3-button" onclick="myAccFunc()">Code of Conduct<i class="fa fa-caret-down"></i></div>
+          <div id="sidebarAcc" class="w3-hide w3-white w3-card-4">
+            <a href="#CoC-swimmers" class="w3-bar-item w3-button">Swimmers</a>
+            <a href="#CoC-parents" class="w3-bar-item w3-button">Parents</a>
+          </div>
+        <a
+          href="#kit"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-gray"
+          >Order Club Kit
+        </a>
+        <a
+          href="#where"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Find Us</a
+        >
+        <a
+          href="https://www.facebook.com/SaddleworthASC/"
+          onclick="w3_close()"
+          target="_blank"
+          class="w3-button w3-hover-grayscale"
+          ><img
+            src="images/facebook (1).png"
+            align="left"
+            style="width: 10%"
+            alt="Facebook"
+          />
+          Find us on Facebook</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="w3-button w3-black w3-margin-right"
+        onclick="w3_open()"
+        >☰</a
+      >
+      <span>Saddleworth A.S.C.</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- General -->
+      <div class="w3-container" id="CoC-swimmers"></div>
+      <h1 class="w3-xxxlarge w3-text-black w3-center">Code of Conduct for Swimmers</h1>
+      <p class="w3-center">The purpose of the Code of Conduct is to maintain the Club’s reputation as a friendly
+        and disciplined organisation and above all for the safety and wellbeing of swimmers.
+        </p>
+      <div class="w3-container" style="margin-top: 80px" id="general">
+        <h1 class="w3-xxlarge w3-text-black">General</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+        <ul>
+          <li>
+            Swimmers will treat all members of, and persons associated with the
+            Swimming Club with respect and courtesy.
+          </li>
+          <li>
+            Swimmers will treat everyone equally and never discriminate against another
+            person on any grounds including that of age, sexual orientation,
+            gender, faith, ethnic origin, or nationality.
+          </li>
+          <li>
+            Swimmers understand that the use of inappropriate or abusive language,
+            bullying, harassment, or physical violence will not be tolerated and
+            could result in action being taken through the disciplinary or child
+            welfare policies.
+          </li>
+          <li>Swimmers will always display a high standard of behaviour.</li>
+          <li>
+            Swimmers will respect the facilities and the property of other swimmers.
+          </li>
+          <li>
+            Swimmers will always report any poor behaviour by others to an appropriate
+            person or member of staff.
+          </li>
+          <li>
+            Swimmers will recognise and celebrate the good performance and success of
+            fellow club and team members.
+          </li>
+          <li>
+            Swimmers will respect the privacy of others, especially in the use of
+            changing facilities.
+          </li>
+          <li>
+            Swimmers understand that if they deliberately break the Code of Conduct, then
+            they will be disciplined immediately and if necessary, withdrawn from
+            the session/competition and that further disciplinary action may be
+            taken following a report from the Coaches or Club representative.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Training -->
+      <div class="w3-container" id="training" style="margin-top: 75px">
+        <h1 class="w3-xxlarge w3-text-black">Training</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+        <ul>
+          <li>Swimmers will arrive in good time and sign in at the Reception desk.</li>
+          <li>
+            Swimmers will ensure that I have all of my equipment with me, e.g., water
+            bottle, hat, goggles, paddles, kick board, etc.
+          </li>
+          <li>
+            If swimmers need to leave the pool for any reason during training they will
+            inform my Coaches before doing so.
+          </li>
+          <li>
+            Swimmers will always listen carefully to any instructions given to me by
+            the Coaches.
+          </li>
+        </ul>
+      </div>
+
+      <!--Competitions-->
+      <div class="w3-container" id="competitions" style="margin-top: 75px">
+        <h1 class="w3-xxlarge w3-text-black">Competitions</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+        <ul>
+          <li>Swimmers understand they are expected to represent the club if selected for a gala or event.</li>
+          <li>Swimmers will report to their Coaches and/or Team Manager on arrival and again on poolside.</li>
+          <li>Swimmers will follow all instructions from the Coaches, Team Managers or any other official at galas.</li>
+          <li>Swimmers will always behave in a safe and responsible manner.</li>
+          <li>Swimmers will always show respect and courtesy to my Coaches, the team mangers, their teammates and the members of all competing organisations at the gala.</li>
+          <li>Swimmers understand that they must wear swimming club kit and wear appropriate poolside clothing for galas.</li>
+          <li>Swimmers will be part of the team by staying on poolside and encouraging and supporting my fellow teammates.  Everyone likes to be supported and they will be supporting in return.</li>
+          <li>If swimmers have to leave poolside for any reason, they will inform the Team Manager/Coaches before doing so.</li>
+          <li>Swimmers will never leave an event without signing out with their Team Manager.</li>
+        </ul>
+      <!-- HHS -->
+      <div class="w3-container" id="HSS" style="margin-top: 75px">
+        <h1 class="w3-xxlarge w3-text-black">Hygiene, Health and Safety</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+        <ul>
+          <li>Swimmers will always walk on the poolside – STRICTLY NO RUNNING.</li>
+          <li>Swimmers will remove any jewellery before leaving home or put it in a locker. SASC cannot take responsibility for such items.</li>
+          <li>Swimmers will ensure that they have their inhaler with them at all swimming sessions or galas which they attend.</li>
+          <li>Swimmers will wear a verruca sock and treat my verruca with a product that seals the verruca.</li>
+          <li>Swimmers will not attend swimming sessions or galas with an open wound, ear infection, heavy cold or chest infections or if they have Covid</li>
+        </ul>
+      </div>
+
+
+      <!--Code of Conduct - Parents -->
+      <div class="w3-container" id="CoC-parents"></div>
+      <h1 class="w3-xxxlarge w3-text-black w3-center" style="margin-top: 80px">Information for Parents</h1>
+      <p class="w3-center w3-large">The purpose of the Code of Conduct is to maintain the Club’s reputation as a friendly
+        and disciplined organisation and above all for the safety and wellbeing of swimmers.
+        </p>
+      <!-- Online Membership -->
+      <div class="w3-container" id="training" style="margin-top: 75px">
+        <h1 class="w3-xxlarge w3-text-black">Online Membership Form</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+        <ul>
+          <li>Parents will complete the Online Membership form</li>
+          <li>Parents will make any necessary payments as instructed.</li>
+          <li>Parents will update any Medical Information.</li>
+          <li>Parents will report any changes in the state of their child’s health to the Coaches prior to training sessions or events. </li>
+          <li>Parents will ensure that the organisation has up-to-date contact details for them and for any alternative person(s) as required.</li>
+          <li>Parents understand that if their payments are in arrears, their child shall not be eligible to swim at any sessions or galas.</li>
+          <li>Parents will ensure that their child has read and understood the Code of Conduct and that they are on time for their sessions</li>
+        </ul>
+      </div>
+
+      <!--Organisation-->
+      <div class="w3-container" id="competitions" style="margin-top: 75px">
+        <h1 class="w3-xxlarge w3-text-black">The organisation will</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+       <ul>
+        <li>Inform you at once if your child becomes ill and will ensure their wellbeing until you are able to collect him/her.</li>
+        <li>Ensure good child safeguarding guidelines are always followed to keep your child safe.</li>
+        <li>Ensure all activities are properly supervised/ taught/coached and that consent is obtained for any activity outside of that previously agreed.</li>
+       </ul>
+      <div class="w3-container" id="assistance" style="margin-top: 75px">
+        <h1 class="w3-xxlarge w3-text-black">Assistance</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+       <ul>
+        <li>SASC is run by volunteers and welcomes any help that parents/guardians can provide.</li>
+        <li>Please come along and join our Committee with our meetings are every two months.</li>
+       </ul>
+      <!-- End page content -->
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div
+      class="w3-black w3-center w3-container w3-padding-16"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="w3-right">
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-opacity"
+          >w3.css</a
+        >
+      </p>
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Script for side-bar accordian 
+      function myAccFunc() {
+      var x = document.getElementById("sidebarAcc");
+      if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className += " w3-green";
+      } else { 
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className = 
+      x.previousElementSibling.className.replace(" w3-green", "");
+    }
+      }
+    </script>
+  </body>
+</html>

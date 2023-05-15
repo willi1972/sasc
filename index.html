@@ -9,7 +9,10 @@
     href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap"
     rel="stylesheet"
   />
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <style>
     body,
     h1,
@@ -86,6 +89,13 @@
           class="w3-bar-item w3-button w3-hover-grayscale"
           >Join Us</a
         >
+        <div class="w3-bar-item w3-button" onclick="myAccFunc()">
+          Code of Conduct<i class="fa fa-caret-down"></i>
+        </div>
+        <div id="sidebarAcc" class="w3-hide w3-white w3-card-4">
+          <a href="#CoC-swimmers" class="w3-bar-item w3-button">Swimmers</a>
+          <a href="#CoC-parents" class="w3-bar-item w3-button">Parents</a>
+        </div>
         <a
           href="#kit"
           onclick="w3_close()"
@@ -325,18 +335,24 @@
           </tr>
         </table>
         <p>
-          To order club kit, please print and complete the <a href="/sasc/documents/SASC_KIT_Order_form.pdf" target="_blank">order form</a>
-          and email to - <a href="mailto:sasckitorders@gmail.com">sasckitorders@gmail.com</a>
+          To order club kit, please print and complete the
+          <a href="/sasc/documents/SASC_KIT_Order_form.pdf" target="_blank"
+            >order form</a
+          >
+          and email to -
+          <a href="mailto:sasckitorders@gmail.com">sasckitorders@gmail.com</a>
         </p>
 
         <p>
-          All orders <strong>MUST</strong> be paid for at time of order, please pay using bank
-          transfer to the following account:-<br /><br />
+          All orders <strong>MUST</strong> be paid for at time of order, please
+          pay using bank transfer to the following account:-<br /><br />
           Payee: SASC<br />
           Sort Code: 01-09-99<br />
           Account Number: 30389267<br /><br />
 
-          Payment Reference: KIT-Firstname-Surname Initial <i><strong> eg. KIT-EmmaC</strong></i><br /><br>
+          Payment Reference: KIT-Firstname-Surname Initial
+          <i><strong> eg. KIT-EmmaC</strong></i
+          ><br /><br />
           When returning form please provide the amount and date paid.
         </p>
       </div>
@@ -417,6 +433,19 @@
         document.getElementById("modal01").style.display = "block";
         var captionText = document.getElementById("caption");
         captionText.innerHTML = element.alt;
+      }
+
+      // Script for side-bar accordian
+      function myAccFunc() {
+        var x = document.getElementById("sidebarAcc");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className += " w3-green";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace(" w3-green", "");
+        }
       }
     </script>
   </body>
