@@ -1,40 +1,43 @@
-﻿<html>
-  <title>Saddleworth ASC</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="sasc.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: "Golos Text", sans-serif;
-    }
-    body {
-      font-size: 16px;
-    }
-    .w3-half img {
-      margin-bottom: -6px;
-      margin-top: 16px;
-      opacity: 0.8;
-      cursor: pointer;
-    }
-    .w3-half img:hover {
-      opacity: 1;
-    }
-  </style>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Saddleworth ASC</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="sasc.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Golos Text", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .w3-half img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
   <body>
     <!-- Sidebar/menu -->
     <nav
@@ -60,67 +63,76 @@
       </div>
       <div class="w3-bar-block">
         <a
-          href="#"
+          href="index.html"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-grayscale"
           >Home</a
         >
         <a
-          href="#story"
+          href="index.html#story"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-hover-grayscale"
           >Our Story</a
         >
         <a
-          href="#people"
+          href="index.html#people"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-hover-grayscale"
           >Our People</a
         >
         <a
-          href="#galas"
+          href="index.html#safeguarding"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-grayscale"
+          >Safeguarding</a
+        >
+
+        <a
+          href="index.html#galas"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-hover-gray"
-          >Galas
+          >Gala's
         </a>
         <a
-          href="#join"
+          href="index.html#join"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-hover-grayscale"
           >Join Us</a
         >
-        <div class="w3-bar-item w3-button" onclick="myAccFunc()">
-          Code of Conduct<i class="fa fa-caret-down"></i>
-        </div>
-        <div id="sidebarAcc" class="w3-hide w3-white w3-card-4">
-          <a href="#CoC-swimmers" class="w3-bar-item w3-button">Swimmers</a>
-          <a href="#CoC-parents" class="w3-bar-item w3-button">Parents</a>
-        </div>
         <a
-          href="#kit"
+          href="index.html#kit"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-hover-gray"
           >Order Club Kit
         </a>
         <a
-          href="#where"
+          href="index.html#where"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-hover-grayscale"
           >Find Us</a
         >
+        <div class="w3-bar-item w3-button" onclick="myAccFunc()">
+          Code of Conduct<i class="fa fa-caret-down"></i>
+        </div>
+        <div id="sidebarAcc" class="w3-hide w3-white w3-card-4">
+          <a
+            href="code_of_conduct.html#CoC-swimmers"
+            class="w3-bar-item w3-button"
+            >Swimmers</a
+          >
+          <a
+            href="code_of_conduct.html#CoC-parents"
+            class="w3-bar-item w3-button"
+            >Parents</a
+          >
+        </div>
         <a
           href="https://www.facebook.com/SaddleworthASC/"
           onclick="w3_close()"
           target="_blank"
           class="w3-button w3-hover-grayscale"
-          ><img
-            src="images/facebook (1).png"
-            align="left"
-            style="width: 10%"
-            alt="Facebook"
-          />
-          Find us on Facebook</a
-        >
+          ><img src="images/facebook.png" alt="Facebook"
+        /></a>
       </div>
     </nav>
 
@@ -164,7 +176,6 @@
             <img
               src="images/swimnw-new.png"
               style="width: 100%"
-              align="bottom"
               onclick="onClick(this)"
               alt="Swim Northwest"
             />
@@ -173,7 +184,6 @@
             <img
               src="images/swimen-new.png"
               style="width: 100%"
-              align="bottom"
               onclick="onClick(this)"
               alt="Swim England"
             />
@@ -182,7 +192,6 @@
             <img
               src="images/swimmark.jpg"
               style="width: 100%"
-              align="bottom"
               onclick="onClick(this)"
               alt="Swim Mark"
             />
@@ -206,6 +215,7 @@
             <p id="caption"></p>
           </div>
         </div>
+        <!--Our Story-->
         <h1 class="w3-xxxlarge w3-text-black">Our Story</h1>
         <hr style="width: 50px; border: 1px solid black" class="w3-round" />
         <p>
@@ -246,7 +256,73 @@
           sessions are conducted by fully qualified professional coaches.
         </p>
       </div>
+      <!--Safeguarding-->
+      <div class="w3-container" id="safeguarding" style="margin-top: 75px">
+        <h1 class="w3-xxxlarge w3-text-black">Safeguarding</h1>
+        <hr style="width: 50px; border: 1px solid black" class="w3-round" />
+        <h1 class="w3-xlarge">
+          Wavepower: Child safeguarding policy and procedures for clubs
+        </h1>
 
+        <p>
+          To help clubs with child welfare Swim England produce 'Wavepower'
+          child safeguarding policies and procedures.
+        </p>
+
+        <p>
+          Wavepower must be adopted by all Swim England affiliated clubs and
+          organisations. The latest version and can be viewed below.
+        </p>
+
+        <p>
+          The aim of Wavepower is to safeguard all children in line with current
+          legislation, regulations and guidance and is for use within any Swim
+          England affiliated organisation where children are present.
+        </p>
+
+        <p>
+          Wavepower consistently emphasises that the responsibility for child
+          safeguarding in our sport belongs with all those involved in our
+          sports and is not the sole responsibility of any one person at local,
+          county or national level.
+        </p>
+
+        <p>
+          When updates or changes take place either in Swim England or through
+          statute or governmental guidance these will be published on the
+          website.
+        </p>
+
+        <p>
+          You can download the&nbsp;<a
+            href="https://www.swimming.org/library/documents/4692/download"
+            >fully interactive Wavepower</a
+          >. It is in PDF format. Alternatively, you can<a
+            rel="noreferrer noopener"
+            href="https://docs.google.com/viewerng/viewer?url=https://www.swimming.org/library/documents/4692/download"
+            target="_blank"
+          >
+            read it online</a
+          >. If it doesn’t load after a few seconds please refresh the page.
+        </p>
+        <p>
+          You can find out more about Safeguarding, Welfare and how to report a
+          concern at Swim Englands
+          <a
+            href="https://www.swimming.org/swimengland/heart-of-aquatics/"
+            target="_blank"
+            >'Home of Aquatics'</a
+          >
+          webpage
+        </p>
+
+        <p>
+          <strong
+            >You can reach SASC&#8217;s Welfare Officer, Claire Tranter, at
+            @gmail.com</strong
+          >.
+        </p>
+      </div>
       <!--Galas-->
       <div class="w3-container" id="galas" style="margin-top: 75px">
         <h1 class="w3-xxxlarge w3-text-black">Galas</h1>
@@ -440,11 +516,11 @@
         var x = document.getElementById("sidebarAcc");
         if (x.className.indexOf("w3-show") == -1) {
           x.className += " w3-show";
-          x.previousElementSibling.className += " w3-green";
+          x.previousElementSibling.className += " w3-grey";
         } else {
           x.className = x.className.replace(" w3-show", "");
           x.previousElementSibling.className =
-            x.previousElementSibling.className.replace(" w3-green", "");
+            x.previousElementSibling.className.replace(" w3-grey", "");
         }
       }
     </script>
